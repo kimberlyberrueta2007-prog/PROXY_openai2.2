@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DiseñaArte IA — v10 (Listo GitHub)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DiseñaArte IA</h1>
+  </header>
+
+  <main>
+    <section class="left">
+      <canvas id="canvas" width="1000" height="650"></canvas>
+      <div class="controls">
+        <label>Herramienta:
+          <select id="tool">
+            <option value="brush">Lápiz</option>
+            <option value="watercolor">Acuarela</option>
+            <option value="marker">Marcador</option>
+            <option value="eraser">Borrador</option>
+          </select>
+        </label>
+
+        <label>Grosor: <input id="size" type="range" min="1" max="60" value="6"></label>
+        <label>Color: <input id="color" type="color" value="#111111"></label>
+        <button id="undo">Deshacer</button>
+        <button id="clear">Limpiar</button>
+        <button id="download">Descargar PNG</button>
+      </div>
+    </section>
+
+    <section class="right">
+      <label>Prompt (describe lo que quieres):</label>
+      <textarea id="prompt" rows="6" placeholder="Ej: Dibuja rosas en acuarela, o 'tutorial para dibujar rostro paso a paso'"></textarea>
+
+      <div class="ai-controls">
+        <button id="aiSketch">Generar boceto</button>
+        <button id="aiArt">Generar artístico</button>
+        <button id="aiTutorial">Modo tutorial</button>
+      </div>
+
+      <div id="log" class="log"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Proyecto listo para GitHub. Configura OPENAI_API_KEY en las variables de entorno del hosting.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
